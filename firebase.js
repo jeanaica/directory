@@ -15,9 +15,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig)
-// const analytics = getAnalytics(app)
+const analytics = getAnalytics(app)
 
 module.exports = {app, 
-  // analytics,
+  analytics,
    firebaseConfig
   }
