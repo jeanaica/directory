@@ -1,4 +1,4 @@
-import { FC, useCallback, useEffect, useMemo, useState } from 'react';
+import { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import {
   DataGrid,
@@ -19,6 +19,7 @@ const Employees: FC = () => {
   const [rows, setRows] = useState<Array<Employee>>(data.employees);
   const [rowModesModel, setRowModesModel] = useState<GridRowModesModel>({});
   const [action, setAction] = useState<'view' | 'add' | 'edit'>('view');
+  const gridRef = useRef<HTMLDivElement>(null);
 
   const [selectionModel, setSelectionModel] = useState<GridSelectionModel>([]);
 
@@ -64,8 +65,12 @@ const Employees: FC = () => {
       <div className='h-full w-[80%] overflow-x-scroll'>
         <div className='h-[90%]'>
           <DataGrid
+            getRowClassName={params =>
+              params.row.id === selectedRowParams?.id ? 'bg-secondary-100' : ''
+            }
             rows={rows}
             columns={columns}
+            ref={gridRef}
             checkboxSelection
             onSelectionModelChange={newSelectionModel =>
               setSelectionModel(newSelectionModel)
@@ -76,6 +81,11 @@ const Employees: FC = () => {
               sorting: {
                 sortModel: [{ field: 'date_created', sort: 'desc' }],
               },
+            }}
+            onCellFocusOut={params => {
+              if (!params.id) {
+                setSelectedRowParams(null);
+              }
             }}
             disableExtendRowFullWidth
             disableSelectionOnClick

@@ -16,4 +16,14 @@ type Employee = {
   isNew?: boolean;
 };
 
+export interface FormValues {
+  id: number;
+  first_name: string;
+  last_name: string;
+  user_id: string;
+  email: string;
+  status: string;
+  date_created?: string | number;
+}
+
 export default Employee;
