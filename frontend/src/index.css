@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Learning Curve';
+  src: url('../public/fonts/learning-curve.ttf') format('truetype');
+}
+
+@layer base {
+  h1, h2, h3 {
+    @apply font-indie-flower;
+  }
+
+  h4, h5, h6 {
+    @apply font-heading;
+  }
+}
