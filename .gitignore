@@ -1,0 +1,12 @@
+.env
+
+.firebase
+.firebaserc
+
+node_modules
+
+scripts/
+import.js
+serviceAccount.json
+
+.DS_Store

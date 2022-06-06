@@ -1,0 +1,30 @@
+{
+  "name": "directory",
+  "version": "1.0.0",
+  "description": "Employee grid",
+  "scripts": {
+    "build": "yarn --cwd ./frontend/ build",
+    "deploy": "yarn build && firebase deploy --only hosting:directory-a5c26"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeanaica/directory.git"
+  },
+  "keywords": [
+    "ReactJS",
+    "Tailwind",
+    "TypeScript",
+    "ESLint",
+    "Prettier"
+  ],
+  "author": "Jeanaica Suplido",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeanaica/directory/issues"
+  },
+  "homepage": "https://github.com/jeanaica/directory#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "firebase": "^9.8.1"
+  }
+}
