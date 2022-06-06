@@ -12,6 +12,8 @@ Technologies used:
 - Tailwind CSS
 - MUI Grid
 
+Also you can view this on [Employee grid website](https://directory-a5c26.web.app/)
+
 ## How to run the frontend
 Using the terminal
 
