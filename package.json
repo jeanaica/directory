@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Employee grid",
   "scripts": {
-    "build": "yarn --cwd ./frontend/build",
+    "build": "yarn --cwd ./frontend/ build",
     "deploy": "yarn build && firebase deploy --only hosting:directory-a5c26"
   },
   "repository": {

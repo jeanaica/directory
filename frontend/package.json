@@ -36,8 +36,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.{ts,tsx}",
     "lint:fix": "eslint --fix 'src/**/*.{ts,tsx}'",
-    "format": "prettier --write 'src/**/*.{ts,tsx,css,md,json}' --config ./.prettierrc",
-    "deploy": "yarn build && firebase deploy --only hosting:crud-meow"
+    "format": "prettier --write 'src/**/*.{ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "eslintConfig": {
     "extends": [

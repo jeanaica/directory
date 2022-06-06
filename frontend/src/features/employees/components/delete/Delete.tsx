@@ -28,7 +28,7 @@ const Delete: FC<Props> = ({
   };
 
   return (
-    <div className='flex mr-4 '>
+    <div className='flex sm:mr-4'>
       <Button
         onClick={handleDeleteClick}
         disabled={!selectionModel.length}>

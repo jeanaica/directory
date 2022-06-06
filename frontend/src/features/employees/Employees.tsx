@@ -63,7 +63,7 @@ const Employees: FC = () => {
   return (
     <div className='flex flex-col justify-center items-center h-full'>
       <div className='h-full w-[80%] overflow-x-scroll'>
-        <div className='h-[90%]'>
+        <div className='h-[90%] pt-4'>
           <DataGrid
             getRowClassName={params =>
               params.row.id === selectedRowParams?.id ? 'bg-secondary-100' : ''

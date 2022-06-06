@@ -1,4 +1,4 @@
-import { Dispatch, FC, SetStateAction, useMemo, useState } from 'react';
+import { Dispatch, FC, SetStateAction, useState } from 'react';
 
 import Employee, {
   FormValues,
@@ -68,14 +68,11 @@ const Edit: FC<Props> = ({
     <div className='flex mr-4 after:h-4 after:w-[2px] after:bg-secondary-100 after:my-2 after:ml-4'>
       <Button
         onClick={handleEditClick}
-        disabled={!selectedRowParams?.id}
-        className='mr-4'>
+        disabled={!selectedRowParams?.id}>
         <span className='material-icons-outlined'>edit</span>
       </Button>
       <Portal open={open}>
         <Form
-          // rows={rows}
-          // rowId={selectedRowParams?.id}
           values={
             editedRow ?? {
               ...(editedRow as unknown as Employee),

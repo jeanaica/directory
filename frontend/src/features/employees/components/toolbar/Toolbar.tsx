@@ -35,7 +35,7 @@ const EditToolbar: FC<EditToolbarProps> = ({
 }) => {
   return (
     <GridToolbarContainer className='flex flex-col gap-4 p-4 sm:flex-row sm:gap-0'>
-      <div className='flex flex-[3] sm:justify-center w-full'>
+      <div className='flex flex-[3] justify-center sm:justify-end w-full'>
         <Add
           rows={rows}
           setRows={setRows}
